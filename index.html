@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KYC Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            color: #007bff;
+            font-size: 28px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .radio-group label {
+            margin-right: 20px;
+        }
+
+        .form-group textarea {
+            width: 100%;
+            max-width: 100%;
+            height: 100px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: none;
+        }
+
+        .file-input {
+            display: block;
+            margin-top: 5px;
+        }
+
+        .btn {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>KYC</h1>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="entity-name">1. Legal Name of the Entity:</label>
+                <input type="text" id="entity-name" name="entity-name" required>
+            </div>
+            <div class="form-group radio-group">
+                <label>2. Business Type:</label>
+                <label for="sole-proprietorship"><input type="radio" id="sole-proprietorship" name="business-type" value="Sole Proprietorship"> Sole Proprietorship</label>
+                <label for="partnership"><input type="radio" id="partnership" name="business-type" value="Partnership"> Partnership</label>
+                <label for="company"><input type="radio" id="company" name="business-type" value="Company"> Company (Specify type):</label>
+                <input type="text" id="company-type" name="company-type">
+            </div>
+            <div class="form-group">
+                <label for="registration-number">3. Registration Number (if applicable):</label>
+                <input type="text" id="registration-number" name="registration-number">
+            </div>
+            <div class="form-group">
+                <label for="incorporation-date">4. Date of Incorporation/Formation:</label>
+                <input type="date" id="incorporation-date" name="incorporation-date">
+            </div>
+            <h2>Contact Information:</h2>
+            <div class="form-group">
+                <label for="registered-address">5. Registered Address:</label>
+                <input type="text" id="registered-address" name="registered-address">
+            </div>
+            <div class="form-group">
+                <label for="principal-address">6. Principal Place of Business:</label>
+                <input type="text" id="principal-address" name="principal-address">
+            </div>
+            <div class="form-group">
+                <label for="email">7. Email Address:</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="phone">8. Phone Number:</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+            <!-- Identity Proof of Entity -->
+            <h2>Identity Proof of Entity (any one):</h2>
+            <div class="form-group file-input">
+                <label for="identity-proof">Select Identity Proof:</label>
+                <input type="file" id="identity-proof" name="identity-proof" accept=".pdf, .jpg, .jpeg, .png">
+                <small>Upload a PDF, JPG, JPEG, or PNG file.</small>
+            </div>
+
+            <!-- Address Proof of Entity -->
+            <h2>Address Proof of Entity (any one):</h2>
+            <div class="form-group file-input">
+                <label for="address-proof">Select Address Proof:</label>
+                <input type="file" id="address-proof" name="address-proof" accept=".pdf, .jpg, .jpeg, .png">
+                <small>Upload a PDF, JPG, JPEG, or PNG file.</small>
+            </div>
+
+            <!-- Authorized Signatory Information -->
+            <h2>Authorized Signatory Information:</h2>
+            <div class="form-group file-input">
+                <label for="authorized-signatory">Select Authorized Signatory Information:</label>
+                <input type="file" id="authorized-signatory" name="authorized-signatory" accept=".pdf, .jpg, .jpeg, .png">
+                <small>Upload a PDF, JPG, JPEG, or PNG file.</small>
+            </div>
+
+            <!-- Financial Information -->
+            <h2>Financial Information:</h2>
+            <div class="form-group">
+                <label for="nature-of-business">18. Nature of Business:</label>
+                <input type="text" id="nature-of-business" name="nature-of-business">
+            </div>
+            <div class="form-group">
+                <label for="turnover">19. Turnover:</label>
+                <input type="text" id="turnover" name="turnover">
+            </div>
+            <div class="form-group">
+                <label for="sources-of-income">20. Sources of Income:</label>
+                <textarea id="sources-of-income" name="sources-of-income"></textarea>
+            </div>
+            <div class="form-group">
+                <button class="btn" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
